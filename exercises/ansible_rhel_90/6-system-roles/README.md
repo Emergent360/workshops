@@ -15,7 +15,7 @@
 
 # Objective
 
-The goal of this exercise is to understand and use pre-existing content in the forms of roles and collections from Automation Hub and Ansible Galaxy.
+The goal of this exercise is to understand and use pre-existing content in the forms of roles and collections.
 
 - Understand and use [Linux System Roles](https://linux-system-roles.github.io/).
   - Use [firewall role](https://galaxy.ansible.com/linux-system-roles/firewall) to configure the firewall
@@ -27,6 +27,8 @@ The goal of this exercise is to understand and use pre-existing content in the f
 Linux System Roles create a consistent user interface to provide settings to a given subsystem that is abstract from any particular implementation. For example, assigning an IP Address to a network interface should be a generic concept separate from any particular implementations such as init networking scripts, NetworkManager, or systemd-networkd.
 
 This exercise will use two Linux System Roles, the `timesync` and `firewall` roles.
+
+For Red Hat Enterprise Linux systems, Red Hat has made the roles and collections from Linux System Roles available as an RPM package called [rhel-system-roles](https://access.redhat.com/articles/3050101).
 
 ## Step 1 - Examine Ansible Project
 
@@ -40,7 +42,7 @@ Take note of the Github repository that was pre-loaded into your Ansible Tower e
 
 ## Step 2 - Examine the Ansible Playbook
 
-Open the repository linked above in your web browser. Navigate to **playbooks/03_hardening.yml**
+Open the repository linked above in your web browser. Navigate to **playbooks/security/hardening.yml**
 
 Take note of these two tasks:
 
@@ -53,22 +55,13 @@ Take note of these two tasks:
 - name: Configure Timesync
   when: harden_time | bool
   include_role:
-    name: linux-system-roles.timesync
+    name: redhat.rhel-system-roles.timesync
 ```
 
-There are two tasks that include a role.  If you have trouble distinguishing a role that comes directly from Ansible Galaxy versus a role that is in an Ansible Collection this nomenclature should help you:
-
-<table>
-<tr>
-  <td>Ansible Collection</td>
-  <td><code>namespace.collection.role</code></td>
-</tr>
-  <tr>
-    <td>Ansible Role</td>
-    <td><code>namespace.role</code>
-</td>
-  </tr>
-</table>
+In the SSH console on the control host, install the rhel-system-roles package using `dnf`:
+```bash
+$ sudo dnf -y install rhel-system-roles
+```
 
 ## Step 3 - Examine the Linux System Roles
 
@@ -100,7 +93,7 @@ vars:
 
 In the Ansible Tower UI navigate to **Templates**.  
 
-Click on the **rocket** to launch the **SERVER / Hardening** job template:
+Click on the **rocket** to launch the **Security / Hardening** job template:
 
 ![job template](images/job.png)
 
