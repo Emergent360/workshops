@@ -31,12 +31,13 @@ This workshop was created to last about 90 minutes and focuses more on targeting
 
 ## Ansible Automation Platform Exercises
 
- - [Exercise 1 - Overview of public cloud provisioning](1-setup)
- - [Exercise 2 - Converting bash/shell commands to Ansible](2-adhoc)
- - [Exercise 3 - Deploying applications to linux hosts](3-playbook)
- - [Exercise 4 - Retrieving information from automation hosts](4-variables)
+ - [Exercise 1 - Check the Prerequisites](1-setup)
+ - [Exercise 2 - Running Ad-hoc Commands](2-adhoc)
+ - [Exercise 3 - Writing Your First Playbook](3-playbook)
+ - [Exercise 4 - Using Variables](4-variables)
  - [Exercise 5 - Self-service IT via surveys](5-surveys)
  - [Exercise 6 - Overview of system roles for RHEL](6-system-roles)
+ - [Exercise 7 - Red Hat Insights](7-insights)
 
 ---
 ![Red Hat Ansible Automation](../../images/rh-ansible-automation-platform.png)
