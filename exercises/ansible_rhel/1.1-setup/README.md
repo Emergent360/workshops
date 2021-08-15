@@ -101,6 +101,10 @@ You will soon discover that many chapters in this lab guide come with a "Challen
 ---
 **Navigation**
 <br>
+{% if page.url contains 'ansible_rhel_90' %}
+[Next Exercise](../2-adhoc)
+{% else %}
 [Next Exercise](../1.2-adhoc)
-<br><br>
+{% endif %}
+
 [Click here to return to the Ansible for Red Hat Enterprise Linux Workshop](../README.md)
