@@ -308,6 +308,10 @@ Run the `ansible node1 -m copy …​` command from above again. Note:
 ---
 **Navigation**
 <br>
+{% if page.url contains 'ansible_rhel_90' %}
+[Previous Exercise](../1-setup) - [Next Exercise](../3-playbook)
+{% else %}
 [Previous Exercise](../1.1-setup) - [Next Exercise](../1.3-playbook)
+{% endif %}
 
 [Click here to return to the Ansible for Red Hat Enterprise Linux Workshop](../README.md)
