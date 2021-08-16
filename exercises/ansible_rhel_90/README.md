@@ -35,9 +35,9 @@ This workshop was created to last about 90 minutes and focuses more on targeting
  - [Exercise 2 - Running Ad-hoc Commands](2-adhoc)
  - [Exercise 3 - Writing Your First Playbook](3-playbook)
  - [Exercise 4 - Using Variables](4-variables)
- - [Exercise 5 - Self-service IT via surveys](5-surveys)
- - [Exercise 6 - Overview of system roles for RHEL](6-system-roles)
- - [Exercise 7 - Red Hat Insights](7-insights)
+ - [Exercise 5 - Introduction to Ansible Tower](5-intro)
+ - [Exercise 6 - Self-service IT via surveys](6-surveys)
+ - [Exercise 7 - Overview of system roles for RHEL](7-system-roles)
 
 ---
 ![Red Hat Ansible Automation](../../images/rh-ansible-automation-platform.png)

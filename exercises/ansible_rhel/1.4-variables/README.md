@@ -266,7 +266,7 @@ node3                      : ok=2    changed=0    unreachable=0    failed=0
 <br>
 
 {% if page.url contains 'ansible_rhel_90' %}
-[Previous Exercise](../3-playbook) - [Next Exercise](../5-surveys)
+[Previous Exercise](../3-playbook) - [Next Exercise](../5-intro)
 {% else %}
 [Previous Exercise](../1.3-playbook) - [Next Exercise](../1.5-handlers)
 {% endif %}
