@@ -1,0 +1,35 @@
+---
+# name prefix for all the VMs
+ec2_name_prefix: network
+
+# amount of work benches to provision
+student_total: 2
+
+# workshop is put into networking mode
+workshop_type: network
+
+# possible values cisco, arista, juniper or multivendor
+network_type: cisco
+
+# region where the nodes will live
+ec2_region: us-east-1
+
+## Optional Variables
+
+# password used for student account on control node
+admin_password: emergent
+
+# Sets the Route53 DNS zone to use for the S3 website
+workshop_dns_zone: lab-emergent360.com
+
+# adds a form that prompts for name and email to allocate student credentials
+attendance: true
+
+# creates HTML website for workshop
+create_login_page: true
+
+# this will install Ansible Tower on all control nodes
+towerinstall: true
+
+# IBM Community Grid - defaults to true if you don't tell the provisioner
+ibm_community_grid: false

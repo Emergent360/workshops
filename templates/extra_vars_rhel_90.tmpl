@@ -1,0 +1,36 @@
+---
+# name prefix for all the VMs
+ec2_name_prefix: rhel-90
+
+# amount of work benches to provision
+student_total: 2
+
+# workshop is put into rhel mode
+workshop_type: rhel_90
+
+# region where the nodes will live
+ec2_region: us-east-1
+
+## Optional Variables
+
+# password used for student account on control node
+admin_password: emergent
+
+# creates AWS S3 website for ec2_name_prefix.workshop_dns_zone
+# this is defaulted to on as of May 13th, 2020
+create_login_page: true
+
+# Sets the Route53 DNS zone to use for the S3 website
+workshop_dns_zone: lab-emergent360.com
+
+# adds a form that prompts for name and email to allocate student credentials
+attendance: true
+
+# this will install Ansible Tower on all control nodes
+towerinstall: true
+
+# this will install all demos from github.com/ansible/product-demos that work for this workshop type
+demo: all
+
+# IBM Community Grid - defaults to true if you don't tell the provisioner
+ibm_community_grid: false

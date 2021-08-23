@@ -1,0 +1,36 @@
+---
+# name prefix for all the VMs
+ec2_name_prefix: windows
+
+# creates student_total of workbenches for the workshop
+student_total: 2
+
+# Set the right workshop type, like networking, rhel or f5 (see above)
+workshop_type: windows
+
+# region where the nodes will live
+ec2_region: us-east-1
+
+# OPTIONAL VARIABLES
+
+# creates 2 windows instances per student instead of default 1
+doubleup: false
+
+# password for Ansible control node, defaults to ansible
+admin_password: emergent
+
+# creates AWS S3 website for ec2_name_prefix.workshop_dns_zone
+# this is defaulted to on as of May 13th, 2020
+create_login_page: true
+
+# Sets the Route53 DNS zone to use for the S3 website
+workshop_dns_zone: lab-emergent360.com
+
+# adds a form that prompts for name and email to allocate student credentials
+attendance: true
+
+# automatically installs Tower to control node
+towerinstall: true
+
+# IBM Community Grid - defaults to true if you don't tell the provisioner
+ibm_community_grid: false
