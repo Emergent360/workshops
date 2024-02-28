@@ -215,7 +215,7 @@
   hosts: control_nodes
   gather_facts: false
   vars:
-    auto_satellite_project_scm_url: 'https://github.com/redhat-partner-tech/automated-satellite.git'
+    auto_satellite_project_scm_url: 'https://github.com/Emergent360/automated-satellite.git'
     auto_satellite_project_scm_branch: 'aap2-23'
     controller_request_timeout: "250"
     controller_configuration_projects_async_retries: "45"
